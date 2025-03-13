@@ -1,0 +1,14 @@
+{% if items or empty %}
+  {%- if title is not empty -%}
+    <h3>{{ title }}</h3>
+  {%- endif -%}
+  {%- if items -%}
+    <ul{{ attributes }}>
+    {%- for item in items -%}
+      <li{{ item.attributes.addClass(listClasses) }}>{{ item.name }}</li>
+    {%- endfor -%}
+    </ul>
+  {%- else -%}
+    {{- empty -}}
+  {%- endif -%}
+{%- endif %}

@@ -13,6 +13,9 @@ class MemoryUserMapper
      */
     public static function toDomain(array $users): array
     {
-        return array_map(static fn ($user): User => new User((int)$user['id'], $user['name']), $users);
+        return array_map(
+            static fn ($user): User => new User((int)$user['id'], $user['name']),
+            $users
+        );
     }
 }

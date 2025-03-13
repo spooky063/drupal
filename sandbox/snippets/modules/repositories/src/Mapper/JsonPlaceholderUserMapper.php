@@ -14,6 +14,9 @@ class JsonPlaceholderUserMapper
      */
     public static function toDomain(array $users): array
     {
-        return array_map(static fn ($user): User => new User($user['id'], $user['name']), $users);
+        return array_map(
+            static fn ($user): User => new User($user['id'], $user['name']),
+            $users
+        );
     }
 }

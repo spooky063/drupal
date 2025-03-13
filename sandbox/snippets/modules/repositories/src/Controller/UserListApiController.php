@@ -50,7 +50,7 @@ class UserListApiController extends ControllerBase implements ContainerInjection
         // ]);
 
         $usersApi = $this->serializer->normalize($users, 'json', [
-          'groups' => ['user-list']
+            'groups' => ['user-list']
         ]);
 
         return new JsonResponse($usersApi);

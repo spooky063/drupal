@@ -17,7 +17,7 @@ class MemoryUserRepository implements UserRepositoryInterface
     public function all(): array
     {
         $users = [
-        ['id' => 1, 'name' => 'fixture_user1']
+            ['id' => 1, 'name' => 'fixture_user1']
         ];
         return MemoryUserMapper::toDomain($users);
     }

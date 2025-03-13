@@ -39,10 +39,8 @@ class UserListController extends ControllerBase implements ContainerInjectionInt
         $userPresent = UserPresenter::present($users);
 
         return [
-        '#theme' => 'item_list',
-        '#type' => 'ul',
-        '#items' => array_map(static fn ($user): string => $user->name, $userPresent),
-        '#title' => 'Liste des utilisateurs',
+            '#theme' => 'user_list',
+            '#items' => $userPresent,
         ];
     }
 }

@@ -27,3 +27,14 @@ function repositories_uninstall(): void
     $users = User::loadMultiple($uids);
     array_map(static fn ($user) => $user->delete(), $users);
 }
+
+function repositories_theme(): array
+{
+    return [
+        'user_list' => [
+            'variables' => [
+                'items' => null,
+            ]
+        ],
+    ];
+}
