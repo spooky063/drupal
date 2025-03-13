@@ -1,0 +1,13 @@
+services:
+  repository.memory:
+    class: Drupal\repositories\MemoryUserRepository
+
+  repository.drupal:
+    class: Drupal\repositories\DrupalUserRepository
+    arguments:
+      - '@entity_type.manager'
+
+  repository.jsonplaceholder:
+    class: Drupal\repositories\JsonPlaceholderUserRepository
+    arguments:
+      - '@http_client'

@@ -1,0 +1,8 @@
+name: Repositories
+type: module
+description: 'Repositories module'
+core_version_requirement: ^10.0 || ^11.0
+package: Custom
+
+dependencies:
+  - drupal:serialization

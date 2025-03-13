@@ -1,0 +1,15 @@
+repositories.users:
+  path: '/userslist'
+  defaults:
+    _controller: '\Drupal\repositories\Controller\UserListController::index'
+    _title: 'Users list'
+  requirements:
+    _permission: 'access content'
+
+repositories.api.users:
+  path: '/api/userslist'
+  defaults:
+    _controller: '\Drupal\repositories\Controller\UserListApiController::index'
+    _title: 'Users list'
+  requirements:
+    _permission: 'access content'

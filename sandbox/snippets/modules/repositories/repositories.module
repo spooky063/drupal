@@ -1,0 +1,29 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\user\Entity\User;
+
+function repositories_install(): void
+{
+    $users = [
+    ['name' => 'fixture_user1', 'mail' => 'user1@example.com'],
+    ['name' => 'fixture_user2', 'mail' => 'user2@example.com'],
+    ['name' => 'fixture_user3', 'mail' => 'user3@example.com'],
+    ['name' => 'fixture_user4', 'mail' => 'user4@example.com'],
+    ['name' => 'fixture_user5', 'mail' => 'user5@example.com'],
+    ];
+
+    foreach ($users as $user) {
+        $user = User::create(['status' => 1, 'password' => 'password', ...$user]);
+        $user->save();
+    }
+}
+
+function repositories_uninstall(): void
+{
+    $query = \Drupal::entityTypeManager()->getStorage('user')->getQuery();
+    $uids = $query->condition('name', 'fixture_%', 'LIKE')->accessCheck()->execute();
+    $users = User::loadMultiple($uids);
+    array_map(static fn ($user) => $user->delete(), $users);
+}
