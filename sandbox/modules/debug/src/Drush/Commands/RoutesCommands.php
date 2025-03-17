@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Drupal\routes\Drush\Commands;
+namespace Drupal\debug\Drush\Commands;
 
 use Consolidation\OutputFormatters\StructuredData\RowsOfFields;
-use Drupal\routes\Action\GetRoutes;
+use Drupal\debug\Action\GetRoutes;
 use Drush\Attributes as CLI;
 use Drush\Commands\AutowireTrait;
 use Drush\Commands\DrushCommands;
@@ -19,9 +19,12 @@ final class RoutesCommands extends DrushCommands
         parent::__construct();
     }
 
-    #[CLI\Command(name: 'routes:list', aliases: ['rlist'])]
-    #[CLI\Usage(name: 'routes:list', description: 'List all routes of the application.')]
-    #[CLI\Usage(name: 'routes:list --filter=\'group=custom\'', description: 'List all routes from custom module.')]
+    /**
+     * List all routes of the application.
+     */
+    #[CLI\Command(name: 'debug:routes', aliases: ['rdebug'])]
+    #[CLI\Usage(name: 'debug:routes', description: 'List all routes of the application.')]
+    #[CLI\Usage(name: 'debug:routes --filter=\'group=custom\'', description: 'List all routes from custom module.')]
     #[CLI\FieldLabels(labels: [
         'group' => 'Group',
         'module_name' => 'Module Name',

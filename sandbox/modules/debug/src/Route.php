@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\routes;
+namespace Drupal\debug;
 
 final class Route
 {

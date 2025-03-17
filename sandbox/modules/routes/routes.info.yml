@@ -1,4 +1,0 @@
-name: Routes
-type: module
-description: Create a drush command to list routes
-core_version_requirement: ^10 || ^11

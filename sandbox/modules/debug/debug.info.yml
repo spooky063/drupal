@@ -1,0 +1,4 @@
+name: Debug
+type: module
+description: Create drush commands with debug feature
+core_version_requirement: ^10 || ^11

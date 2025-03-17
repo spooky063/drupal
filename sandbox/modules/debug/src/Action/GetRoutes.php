@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Drupal\routes\Action;
+namespace Drupal\debug\Action;
 
 use ArrayIterator;
 use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Extension\Extension;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Routing\RouteProviderInterface;
-use Drupal\routes\Route as ExampleRoute;
+use Drupal\debug\Route as DebugRoute;
 use Symfony\Component\Routing\Route;
 
 final class GetRoutes
 {
     /**
-     * @return ExampleRoute[]
+     * @return DebugRoute[]
      */
     public function execute(): array
     {
@@ -28,7 +28,7 @@ final class GetRoutes
 
     /**
      * @param array|ArrayIterator<string, Route> $routes
-     * @return ExampleRoute[]
+     * @return DebugRoute[]
      */
     private function getRouteListProperties(array|ArrayIterator $routes): array
     {
@@ -45,7 +45,7 @@ final class GetRoutes
             $isAdminRoute = $hasOptionAdminRoute && $route->getOption('_admin_route');
 
             if (count($route->getMethods()) === 0) {
-                $routeList[] = new ExampleRoute(
+                $routeList[] = new DebugRoute(
                     $routeProperty['module'],
                     $routeName,
                     $route->getPath(),
@@ -56,7 +56,7 @@ final class GetRoutes
             }
 
             foreach ($route->getMethods() as $method) {
-                $routeList[] = new ExampleRoute(
+                $routeList[] = new DebugRoute(
                     $routeProperty['module'],
                     $routeName,
                     $route->getPath(),
