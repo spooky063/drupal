@@ -32,6 +32,7 @@ I got tired of always going back to my configuration files to find out which awe
 - [Paranoia](https://www.drupal.org/project/paranoia) :lock:
 - [Password Policy](https://www.drupal.org/project/password_policy): Create constraint for password input
 - [Pathauto](https://www.drupal.org/project/pathauto): It must be into Drupal core but...
+- [Raven](https://git.drupalcode.org/project/raven): To send logs into Sentry
 - [Redirect](https://www.drupal.org/project/redirect): Create redirection when node url changes
 - [Rename Admin Paths](https://www.drupal.org/project/rename_admin_paths) :lock:
 - [Scheduler](https://www.drupal.org/project/scheduler): Publish/Unpublish schedule for nodes
@@ -63,3 +64,6 @@ I got tired of always going back to my configuration files to find out which awe
 ## PDF
 - [TDD in Drupal](https://lisbon2018.drupaldays.org/sites/default/files/2018-07/tdd-test-driven-drupal.pdf)
 - [Mocking Drupal](http://drupalcampohio.org/sites/default/files/slides/dco2015-mocking-drupal.pdf)
+
+## Convention
+- [Previous/Next](https://www.previousnext.com.au/blog): Australian Drupal meeting
