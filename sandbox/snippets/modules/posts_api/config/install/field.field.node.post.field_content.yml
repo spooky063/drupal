@@ -1,0 +1,22 @@
+uuid: 85805655-975b-4fa2-bad9-63008ebe5242
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.post
+  module:
+    - text
+id: node.post.field_content
+field_name: field_content
+entity_type: node
+bundle: post
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

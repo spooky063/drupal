@@ -1,0 +1,7 @@
+name: Post API
+type: module
+description: API for Post Content type
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - 'drupal:pgsql'

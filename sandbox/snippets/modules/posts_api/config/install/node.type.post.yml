@@ -1,0 +1,13 @@
+uuid: b9ec287e-c9e1-45e9-85ff-9d68a945f5b1
+langcode: en
+status: true
+name: 'Post'
+type: post
+description: 'A post content type.'
+module: node
+default_langcode: true
+third_party_settings: {  }
+translatable: false
+custom: false
+modified: 1630528902
+fieldable: true
