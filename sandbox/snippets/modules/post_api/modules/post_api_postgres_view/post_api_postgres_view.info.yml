@@ -1,0 +1,8 @@
+name: Post API Postgres View
+type: module
+description: Create API for Post Content type with Postgres View.
+core_version_requirement: ^10 || ^11
+package: Post API
+dependencies:
+  - 'drupal:pgsql'
+  - 'post_api:post_api'

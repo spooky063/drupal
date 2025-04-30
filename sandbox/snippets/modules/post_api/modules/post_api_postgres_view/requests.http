@@ -1,0 +1,24 @@
+@baseUrl = http://drupal10.localhost
+
+# @name getPostNodeListWithPostgresView
+GET {{baseUrl}}/api/postgres_view/posts  HTTP/1.1
+
+###
+
+# @name getPage2PostNodeListWithPostgresView
+@limit = 5
+@page = 2
+
+GET {{baseUrl}}/api/postgres_view/posts?page={{page}}&limit={{limit}}  HTTP/1.1
+
+###
+
+# @name getPostNodeWithPostgresView
+GET {{baseUrl}}/api/postgres_view/posts/101  HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name getNotFoundPostNodeWithPostgresView
+GET {{baseUrl}}/api/symfony/posts/999999  HTTP/1.1
+Content-Type: application/json

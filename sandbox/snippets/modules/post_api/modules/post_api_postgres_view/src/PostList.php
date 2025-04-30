@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\posts_api;
+namespace Drupal\post_api_postgres_view;
 
 final class PostList
 {

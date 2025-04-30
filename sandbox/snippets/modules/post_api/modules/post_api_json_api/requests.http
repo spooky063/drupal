@@ -1,0 +1,27 @@
+@baseUrl = http://drupal10.localhost
+
+# @name getPostNodeListWithJSONAPI
+GET {{baseUrl}}/jsonapi/node/post?sort=nid&page[limit]=10&fields[node--post]=nid,title,field_content&fields[user--user]=display_name&include=uid HTTP/1.1
+Accept: application/vnd.api+json
+Content-Type: application/vnd.api+json
+
+###
+
+# @name getPage2PostListNodeWithJSONAPI
+@limit = 5
+# Page 2 => ($page - 1) * $limit
+@offset = 5
+GET {{baseUrl}}/jsonapi/node/post?sort=nid&page[offset]={{offset}}&page[limit]={{limit}}  HTTP/1.1
+
+###
+
+# @name getPostNodeWithJSONAPI
+@uuid = d271ba71-4b52-4c66-a259-39ad2864bb88
+GET {{baseUrl}}/jsonapi/node/post/{{uuid}}  HTTP/1.1
+Content-Type: application/json
+
+###
+
+# @name getNotFoundPostNodeWithJSONAPI
+GET {{baseUrl}}/jsonapi/node/post/999999  HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,8 @@
+name: Post API Json:API
+type: module
+description: Create API for Post Content type with Drupal database and Json:API module.
+core_version_requirement: ^10 || ^11
+package: Post API
+dependencies:
+  - 'drupal:jsonapi'
+  - 'post_api:post_api'

@@ -1,0 +1,32 @@
+<?php
+
+declare(strict_types=1);
+
+function post_api_postgres_view_install(): void
+{
+    $database = \Drupal::database();
+    $query = <<<SQL
+    CREATE OR REPLACE VIEW post_node_with_author_json AS
+    SELECT
+      n.nid AS id,
+      n.title,
+      c.field_content_value AS content,
+      json_build_object(
+        'id', u.uid,
+        'name', u.name
+      ) AS author
+    FROM {node_field_data} AS n
+    JOIN {users_field_data} AS u ON n.uid = u.uid
+    LEFT JOIN {node__field_content} AS c ON n.nid = c.entity_id
+    WHERE n.type = :type
+    GROUP BY n.nid, n.title, c.field_content_value, u.uid, u.name
+    ORDER BY n.nid;
+    SQL;
+    $database->query($query, [':type' => 'post']);
+}
+
+function post_api_postgres_view_uninstall(): void
+{
+    $database = \Drupal::database();
+    $database->query('DROP VIEW post_node_with_author_json;');
+}

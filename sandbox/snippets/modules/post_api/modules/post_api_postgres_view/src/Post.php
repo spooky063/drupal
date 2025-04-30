@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drupal\posts_api;
+namespace Drupal\post_api_postgres_view;
 
 use Drupal\Core\Url;
 
@@ -23,7 +23,7 @@ final class Post
     public static function create(array $posts): array
     {
         return array_map(static function (array $post): Post {
-            $route = Url::fromRoute('posts_api.get.detail', ['id' => $post['id']])->toString();
+            $route = Url::fromRoute('post_api_postgres_view.get.detail', ['id' => $post['id']])->toString();
 
             return new Post(
                 $post['id'],

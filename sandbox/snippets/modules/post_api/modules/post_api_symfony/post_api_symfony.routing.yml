@@ -1,0 +1,15 @@
+post_api_symfony.get:
+  path: '/api/symfony/posts'
+  defaults:
+    _controller: '\Drupal\post_api_symfony\Controller\PostListController::index'
+    _title: 'List of posts'
+  requirements:
+    _permission: 'access content'
+
+post_api_symfony.get.detail:
+  path: '/api/symfony/posts/{id}'
+  defaults:
+    _controller: '\Drupal\post_api_symfony\Controller\PostController::index'
+    _title: 'Detail of post'
+  requirements:
+    _permission: 'access content'

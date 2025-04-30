@@ -7,21 +7,7 @@ use Drupal\node\Entity\Node;
 use Drupal\node\Entity\NodeType;
 use Drupal\user\Entity\User;
 
-function posts_api_help($route_name): ?string
-{
-  if ($route_name === 'help.page.posts_api') {
-      $output = <<<HTML
-      <h3>About</h3>
-      <p>Create API entrypoints via Postgres View.</p>
-      HTML;
-
-      return $output;
-  }
-
-  return null;
-}
-
-function posts_api_install(): void
+function post_api_install(): void
 {
     for ($i = 1; $i <= 5; $i++) {
         $user = User::create([
@@ -52,33 +38,10 @@ function posts_api_install(): void
         ]);
         $post->save();
     }
-
-    $database = \Drupal::database();
-    $query = <<<SQL
-    CREATE OR REPLACE VIEW post_node_with_author_json AS
-    SELECT
-      n.nid AS id,
-      n.title,
-      c.field_content_value AS content,
-      json_build_object(
-        'id', u.uid,
-        'name', u.name
-      ) AS author
-    FROM {node_field_data} AS n
-    JOIN {users_field_data} AS u ON n.uid = u.uid
-    LEFT JOIN {node__field_content} AS c ON n.nid = c.entity_id
-    WHERE n.type = :type
-    GROUP BY n.nid, n.title, c.field_content_value, u.uid, u.name
-    ORDER BY n.nid;
-    SQL;
-    $database->query($query, [':type' => 'post']);
 }
 
-function posts_api_uninstall(): void
+function post_api_uninstall(): void
 {
-    $database = \Drupal::database();
-    $database->query('DROP VIEW post_node_with_author_json;');
-
     $nodes = \Drupal::entityTypeManager()->getStorage('node')
       ->loadByProperties([
         'type' => 'post'
