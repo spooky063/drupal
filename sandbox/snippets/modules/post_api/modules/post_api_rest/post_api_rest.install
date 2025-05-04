@@ -1,0 +1,11 @@
+<?php
+
+declare(strict_types=1);
+
+function post_api_rest_update_8001(): void
+{
+    user_role_grant_permissions(
+        'anonymous',
+        ['restful get post_resource', 'restful get post_list_resource']
+    );
+}

@@ -1,0 +1,12 @@
+services:
+  normalizer.post_list:
+    class: Drupal\post_api_rest\Normalizer\PostListNormalizer
+    tags:
+      - { name: normalizer, priority: 22 }
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
+
+  normalizer.post_detail:
+    class: Drupal\post_api_rest\Normalizer\PostNormalizer
+    tags:
+      - { name: normalizer, priority: 22 }
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager']
