@@ -1,0 +1,399 @@
+{
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {
+            "list_post": {
+                "path": "::list_post",
+                "id": "f78b5013c0c664d47a43928308609279",
+                "groups": {},
+                "checks": {},
+                "name": "list_post"
+            },
+            "paginate_post": {
+                "name": "paginate_post",
+                "path": "::paginate_post",
+                "id": "79c589635807bfd5fb1d09ff31d5fc65",
+                "groups": {},
+                "checks": {}
+            },
+            "get_post": {
+                "groups": {},
+                "checks": {},
+                "name": "get_post",
+                "path": "::get_post",
+                "id": "12123bfc9923b0b93b9e1efc3d6beaf9"
+            }
+        },
+        "checks": {
+            "post_list_json status is 200": {
+                "name": "post_list_json status is 200",
+                "path": "::post_list_json status is 200",
+                "id": "791b2e97461ed6f3b06e3499311b3753",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_list_node status is 200": {
+                "name": "post_list_node status is 200",
+                "path": "::post_list_node status is 200",
+                "id": "10e9cb3999a75034b0679b9b434aaefa",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_list_postgres status is 200": {
+                "name": "post_list_postgres status is 200",
+                "path": "::post_list_postgres status is 200",
+                "id": "ffa65278bd51b4c165ac6c7c802d0f83",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_list_symfony status is 200": {
+                "path": "::post_list_symfony status is 200",
+                "id": "ab1e6564707d362cfed1b00821130e7a",
+                "passes": 100,
+                "fails": 0,
+                "name": "post_list_symfony status is 200"
+            },
+            "post_paginate_json status is 200": {
+                "name": "post_paginate_json status is 200",
+                "path": "::post_paginate_json status is 200",
+                "id": "21644467939a631631af98e8062f7631",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_paginate_node status is 200": {
+                "fails": 0,
+                "name": "post_paginate_node status is 200",
+                "path": "::post_paginate_node status is 200",
+                "id": "6b3e27616d1b4c905273c6e11c041ad6",
+                "passes": 100
+            },
+            "post_paginate_postgres status is 200": {
+                "path": "::post_paginate_postgres status is 200",
+                "id": "64f067fc6720e1935b171037eaa04993",
+                "passes": 100,
+                "fails": 0,
+                "name": "post_paginate_postgres status is 200"
+            },
+            "post_paginate_symfony status is 200": {
+                "id": "d2f1689ab966162b3c07a8ef1b5e18ee",
+                "passes": 100,
+                "fails": 0,
+                "name": "post_paginate_symfony status is 200",
+                "path": "::post_paginate_symfony status is 200"
+            },
+            "post_item_json status is 200": {
+                "passes": 100,
+                "fails": 0,
+                "name": "post_item_json status is 200",
+                "path": "::post_item_json status is 200",
+                "id": "7e880b6217ae98d486520943811cfbdf"
+            },
+            "post_item_node status is 200": {
+                "name": "post_item_node status is 200",
+                "path": "::post_item_node status is 200",
+                "id": "c12caa7279645cae129957b8b24b8510",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_item_postgres status is 200": {
+                "name": "post_item_postgres status is 200",
+                "path": "::post_item_postgres status is 200",
+                "id": "95e9a3033ad4214606dc5c2e138fd2f6",
+                "passes": 100,
+                "fails": 0
+            },
+            "post_item_symfony status is 200": {
+                "fails": 0,
+                "name": "post_item_symfony status is 200",
+                "path": "::post_item_symfony status is 200",
+                "id": "99fb6f9c451e922cd70913d44cd26a81",
+                "passes": 100
+            }
+        }
+    },
+    "metrics": {
+        "duration_post_item_json": {
+            "min": 671.884181,
+            "med": 858.5486065,
+            "max": 1318.636732,
+            "p(90)": 1050.6099566000003,
+            "p(95)": 1107.70870315,
+            "avg": 883.0029195900003
+        },
+        "duration_post_paginate_postgres": {
+            "avg": 407.78513859,
+            "min": 269.489256,
+            "med": 397.80337699999995,
+            "max": 647.753899,
+            "p(90)": 519.9395848,
+            "p(95)": 587.8911671
+        },
+        "http_req_sending": {
+            "med": 0.039299,
+            "max": 7.952397,
+            "p(90)": 0.08473250000000002,
+            "p(95)": 0.13367249999999978,
+            "avg": 0.07025339083333344,
+            "min": 0.015775
+        },
+        "data_sent": {
+            "count": 130800,
+            "rate": 1494.972902880364
+        },
+        "success_post_list_node": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "iteration_duration": {
+            "p(95)": 9604.73787735,
+            "avg": 8648.035492210001,
+            "min": 7367.03411,
+            "med": 8647.1768805,
+            "max": 10931.813029,
+            "p(90)": 9301.818374
+        },
+        "vus_max": {
+            "value": 10,
+            "min": 10,
+            "max": 10
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 1200,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "duration_post_list_symfony": {
+            "med": 653.581075,
+            "max": 981.249937,
+            "p(90)": 852.8242478,
+            "p(95)": 896.304356,
+            "avg": 680.8214789299999,
+            "min": 468.103989
+        },
+        "group_duration": {
+            "p(90)": 3356.6122073,
+            "p(95)": 3557.7161927,
+            "avg": 2882.566824613335,
+            "min": 1578.166469,
+            "med": 2866.1104619999996,
+            "max": 4708.871269
+        },
+        "success_post_item_node": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration": {
+            "med": 719.0821245,
+            "max": 1961.7808,
+            "p(90)": 1052.4717735000002,
+            "p(95)": 1163.82042265,
+            "avg": 719.8848033116662,
+            "min": 144.655379,
+            "thresholds": {
+                "p(95)<3000": false
+            }
+        },
+        "http_req_tls_handshaking": {
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0
+        },
+        "success_post_item_symfony": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "duration_post_paginate_symfony": {
+            "med": 630.127845,
+            "max": 1153.698849,
+            "p(90)": 795.4254962000002,
+            "p(95)": 891.3494538999998,
+            "avg": 662.4603603699999,
+            "min": 498.794111
+        },
+        "success_post_item_json": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "success_post_list_symfony": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "success_post_paginate_symfony": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_waiting": {
+            "min": 144.423363,
+            "med": 718.796103,
+            "max": 1961.351085,
+            "p(90)": 1052.2345517,
+            "p(95)": 1163.5014931499998,
+            "avg": 719.5309679583327
+        },
+        "duration_post_item_postgres": {
+            "avg": 384.9615894800001,
+            "min": 144.655379,
+            "med": 361.3010125,
+            "max": 803.85027,
+            "p(90)": 521.2861881,
+            "p(95)": 584.3453203500001
+        },
+        "vus": {
+            "value": 2,
+            "min": 2,
+            "max": 10
+        },
+        "success_post_paginate_postgres": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "success_post_paginate_json": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 719.8848033116662,
+            "min": 144.655379,
+            "med": 719.0821245,
+            "max": 1961.7808,
+            "p(90)": 1052.4717735000002,
+            "p(95)": 1163.82042265
+        },
+        "iterations": {
+            "count": 100,
+            "rate": 1.142945644403948
+        },
+        "data_received": {
+            "count": 2876150,
+            "rate": 32872.83115152415
+        },
+        "success_post_list_json": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "duration_post_list_node": {
+            "p(95)": 1233.1524003,
+            "avg": 912.1775164900002,
+            "min": 684.31756,
+            "med": 855.087951,
+            "max": 1507.134236,
+            "p(90)": 1175.0252656000002
+        },
+        "success_post_list_postgres": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "duration_post_item_node": {
+            "avg": 734.6054117900001,
+            "min": 360.379058,
+            "med": 705.371609,
+            "max": 1059.503618,
+            "p(90)": 892.4994935999999,
+            "p(95)": 927.6594680000001
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 1.456402,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0.006929957500000001
+        },
+        "duration_post_paginate_json": {
+            "p(90)": 1287.4839191,
+            "p(95)": 1357.0469065,
+            "avg": 1039.77840723,
+            "min": 811.008449,
+            "med": 1005.6243485,
+            "max": 1507.021558
+        },
+        "http_req_receiving": {
+            "med": 0.1979785,
+            "max": 8.441637,
+            "p(90)": 0.4245917000000005,
+            "p(95)": 0.7280741499999999,
+            "avg": 0.28358196249999956,
+            "min": 0.073694
+        },
+        "duration_post_list_postgres": {
+            "med": 425.2184415,
+            "max": 882.447382,
+            "p(90)": 577.7109388000001,
+            "p(95)": 638.70781905,
+            "avg": 438.86611159999984,
+            "min": 257.846954
+        },
+        "http_reqs": {
+            "count": 1200,
+            "rate": 13.715347732847377
+        },
+        "duration_post_paginate_node": {
+            "p(90)": 1007.2385478,
+            "p(95)": 1106.9575074,
+            "avg": 875.4061458000001,
+            "min": 634.162828,
+            "med": 870.9090065,
+            "max": 1249.904516
+        },
+        "success_post_paginate_node": {
+            "fails": 0,
+            "passes": 100,
+            "value": 1
+        },
+        "success_post_item_postgres": {
+            "passes": 100,
+            "fails": 0,
+            "value": 1
+        },
+        "duration_post_item_symfony": {
+            "avg": 578.6793884200001,
+            "min": 299.25473,
+            "med": 565.0116634999999,
+            "max": 889.923996,
+            "p(90)": 714.3809038,
+            "p(95)": 769.2596567999999
+        },
+        "checks": {
+            "passes": 1200,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.99": false
+            },
+            "value": 1
+        },
+        "duration_post_list_json": {
+            "avg": 1040.07317145,
+            "min": 645.218966,
+            "med": 996.4545935,
+            "max": 1961.7808,
+            "p(90)": 1249.4089123000003,
+            "p(95)": 1318.2125740499998
+        },
+        "http_req_blocked": {
+            "p(90)": 0.025669600000000025,
+            "p(95)": 0.03829789999999999,
+            "avg": 0.030640108333333305,
+            "min": 0.004358,
+            "med": 0.0111865,
+            "max": 1.842348
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+function post_api_symfony_install(): void
+{
+    $messenger = \Drupal::messenger();
+    $messenger->addMessage('The package `symfony/property-access` is mandatory. Install it.', $messenger::TYPE_WARNING);
+
+    if (php_sapi_name() === 'cli') {
+        print "\n\e[33mThe package `symfony/property-access` is mandatory. Install it.\e[0m\n\n";
+    }
+}
