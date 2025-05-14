@@ -18,9 +18,15 @@ class PostNormalizer extends NormalizerBase
             return false;
         }
 
-        /** @var Request $request */
         $request = $context['request'];
-        $id = $request->attributes->has('id');
+        if (!$request instanceof Request) {
+          return false;
+        }
+
+        $id = false;
+        if ($request instanceof Request) {
+          $id = $request->attributes->has('id');
+        }
 
         return ($entity instanceof NodeInterface && $entity->getType() === 'post' && $id);
     }

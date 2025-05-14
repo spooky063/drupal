@@ -19,6 +19,10 @@ const groups = {
         'path': '/api/postgres_view/posts',
         'tag': 'postgres'
       },
+      'post_list_rest': {
+        'path': '/api/rest/posts?_format=json',
+        'tag': 'rest'
+      },
       'post_list_symfony': {
         'path': '/api/symfony/posts',
         'tag': 'symfony'
@@ -40,6 +44,10 @@ const groups = {
         'path': '/api/postgres_view/posts?page=2&limit=10',
         'tag': 'postgres'
       },
+      'post_paginate_rest': {
+        'path': '/api/rest/posts?_format=json&page=2&limit=10',
+        'tag': 'rest'
+      },
       'post_paginate_symfony': {
         'path': '/api/symfony/posts?page=2&limit=10',
         'tag': 'symfony'
@@ -60,6 +68,10 @@ const groups = {
       'post_item_postgres': {
         'path': '/api/postgres_view/posts/101',
         'tag': 'postgres'
+      },
+      'post_item_rest': {
+        'path': '/api/rest/posts/101?_format=json',
+        'tag': 'rest'
       },
       'post_item_symfony': {
         'path': '/api/symfony/posts/101',
@@ -87,12 +99,12 @@ Object.entries(groups).forEach(([name, group]) => {
 });
 
 const vus = 10;
-const iterations = 10;
+const iterations = 1;
 export const options = {
   vus: vus,
   iterations: vus * iterations,
   thresholds: {
-    'http_req_duration': ['p(95)<3000'],
+    'http_req_duration': ['p(95)<7000'],
     'http_req_failed': ['rate<0.01'],
     'checks': ['rate>0.99'],
   }

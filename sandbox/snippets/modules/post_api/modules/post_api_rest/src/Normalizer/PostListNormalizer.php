@@ -19,9 +19,15 @@ class PostListNormalizer extends NormalizerBase
             return false;
         }
 
-        /** @var Request $request */
         $request = $context['request'];
-        $id = $request->attributes->has('id');
+        if (!$request instanceof Request) {
+          return false;
+        }
+
+        $id = false;
+        if ($request instanceof Request) {
+          $id = $request->attributes->has('id');
+        }
 
         return ($entity instanceof NodeInterface && $entity->getType() === 'post' && $id === false);
     }
@@ -33,9 +39,11 @@ class PostListNormalizer extends NormalizerBase
      */
     public function normalize($entity, $format = null, array $context = []): array
     {
-        /** @var Request $request */
         $request = $context['request'];
-        $format = $request->query->get('_format', 'json');
+        $query_format = [];
+        if ($request instanceof Request) {
+          $query_format = ['query' => ['_format' => $request->query->get('_format', 'json')]];
+        }
 
         /** @var string $content */
         $content = $entity->get('field_content')->value;
@@ -43,7 +51,7 @@ class PostListNormalizer extends NormalizerBase
         $urlNodeDetail = Url::fromRoute(
             'rest.post_resource.GET',
             ['id' => $entity->id()],
-            ['query' => ['_format' => $format]]
+            $query_format
         )->toString();
 
         return [
