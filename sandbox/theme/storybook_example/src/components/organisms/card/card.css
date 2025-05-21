@@ -1,0 +1,57 @@
+article {
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: white;
+  overflow: hidden;
+  max-width: 25em;
+  border: 1px solid #e5e5e5;
+}
+
+article a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+article h2 {
+  margin: 0 0 18px 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+}
+
+article figure {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+article img {
+  max-width: 100%;
+
+  /* Example */
+  background: url('/images/377-400x300.jpg');
+  width: inherit;
+  height: 270px;
+}
+
+article p {
+  padding-bottom: 16px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+.article-detail {
+  padding: 24px;
+}

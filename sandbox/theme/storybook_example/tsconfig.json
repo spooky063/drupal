@@ -22,7 +22,10 @@
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
-    }
+    },
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "types.d.ts"
+  ]
 }

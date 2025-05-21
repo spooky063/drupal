@@ -1,1 +1,1 @@
-import '@components/button/button.js'
+import '@components/atoms/button/button.js'

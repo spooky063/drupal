@@ -1,5 +1,8 @@
 :root {
+  color-scheme: light dark;
+
   --clr-primary-400: light-dark(#00A6FB, #052a3d);
+  --clr-secondary-400: light-dark(#FFA500, #784e00);
 
   --bg-clr-primary-400: light-dark(#FFFFFF, #1e1e1e);
 

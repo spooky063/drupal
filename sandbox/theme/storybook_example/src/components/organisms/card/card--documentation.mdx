@@ -1,0 +1,61 @@
+import { Meta, Controls, Story, Canvas, ArgTypes, Title } from '@storybook/blocks';
+import * as Card from './card.stories';
+
+<Meta title="UI/Organisms/Card" name="Documentation" component={Card} />
+
+<Title>Card</Title>
+
+Card is a component to display a content with an image, a title, a label, a link and a content.
+
+### Usage
+
+- A card can be used to display teaser of a node.
+- Image is optional.
+
+## Card example
+
+<Canvas of={Card.Default} />
+
+## Using button with Drupal
+
+Use card component with all the parameters.
+
+```twig
+{% include '@storybook_example/organisms/card/card.twig' with {
+  attributes: attributes,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  label: label,
+  title_attributes: title_attributes,
+  plugin_id: plugin_id,
+  content: content.field_content | render,
+  configuration: configuration,
+  link: {
+    url: path('entity.node.canonical', {'node': node.nid.value}),
+    content: 'Read more'
+  }
+} %}
+```
+
+Use card component with overriding blocks.
+
+```twig
+{% embed '@storybook_example/organisms/card/card.twig' with {
+  attributes: attributes,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  label: label,
+  title_attributes: title_attributes,
+  plugin_id: plugin_id,
+  content: content.field_content | render,
+  configuration: configuration,
+} %}
+  {% block link %}
+    {% include '@storybook_example/atoms/button/button.twig' with { variant: 'primary', content: 'Read more' } %}
+  {% endblock %}
+{% endembed %}
+```
+
+## References
+
+<ArgTypes of={Card} />

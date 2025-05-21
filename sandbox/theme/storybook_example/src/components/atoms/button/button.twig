@@ -1,0 +1,7 @@
+{%
+  set classes = [
+    'btn',
+    variant is defined and variant != 'default' ? 'btn-' ~ variant : '',
+  ]
+%}
+<button class="{{ classes|join(' ')|trim }}">{{ content }}</button>

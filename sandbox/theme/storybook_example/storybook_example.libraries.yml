@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/5n00p4eg/Drupal-json-schemas/master/schema/schema/drupal/libraries.yml.json
+# yaml-language-server: $schema=https://json.schemastore.org/drupal-libraries.json
 
 global-css:
   css:

@@ -1,0 +1,14 @@
+{% include '@storybook_example/organisms/card/card.twig' with {
+  attributes: attributes,
+  title_prefix: title_prefix,
+  title_suffix: title_suffix,
+  label: label,
+  title_attributes: title_attributes,
+  plugin_id: plugin_id,
+  content: content.field_content | render,
+  configuration: configuration,
+  link: {
+    url: path('entity.node.canonical', {'node': node.nid.value}),
+    content: 'Read more'
+  }
+} %}

@@ -1,0 +1,15 @@
+.btn {
+  color: var(--ft-clr-primary-400);
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary-400);
+}
+
+.btn-secondary {
+  background-color: var(--clr-secondary-400);
+}

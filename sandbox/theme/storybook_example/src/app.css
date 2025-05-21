@@ -3,6 +3,7 @@
 @import './css/font.css';
 @import './css/base.css';
 
-@import './components/button/button.css';
+@import './components/atoms/button/button.css';
+@import './components/atoms/link/link.css';
 
-@import './components/card/card.css';
+@import './components/organisms/card/card.css';

@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'block',
+    configuration is defined and configuration.provider is defined and configuration.provider is not empty ? 'block-' ~ configuration.provider|clean_class : '',
+    plugin_id is defined and plugin_id is not empty ? 'block-' ~ plugin_id|clean_class : '',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {% if image.source %}
+  <figure>
+    <img src='{{ image.source }}' alt='{{ image.alt }}'>
+  </figure>
+  {% endif %}
+  <div class="article-detail">
+    {{ title_prefix }}
+    {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+    {% block link %}
+    {% include "@storybook_example/atoms/link/link.twig" with { url: link.url, content: link.content } %}
+    {% endblock %}
+  </div>
+</article>

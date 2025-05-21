@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/5n00p4eg/Drupal-json-schemas/master/schema/drupal/info.yml.json
+# yaml-language-server: $schema=https://json.schemastore.org/drupal-info.json
 
 name: Storybook example theme
 type: theme
@@ -6,7 +6,7 @@ base theme: false
 description: A storybook example theme with vite.
 package: Other
 version: 1.0.0
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 
 features:
   - logo
