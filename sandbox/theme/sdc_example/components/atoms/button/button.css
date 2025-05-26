@@ -1,0 +1,15 @@
+[data-component-id="sdc_example:button"] {
+  color: #1e1e1e;
+  cursor: pointer;
+  border: none;
+  padding: .5rem;
+  border-radius: 8px;
+}
+
+[data-component-id="sdc_example:button"].btn-primary {
+  background-color: #00A6FB;
+}
+
+[data-component-id="sdc_example:button"].btn-secondary {
+  background-color: #FFA500;
+}

@@ -1,0 +1,7 @@
+name: SDC example theme
+type: theme
+base theme: false
+description: A SDC example theme with vite.
+package: Other
+version: 1.0.0
+core_version_requirement: ^9 || ^10 || ^11

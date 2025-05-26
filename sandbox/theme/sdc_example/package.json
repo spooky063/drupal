@@ -1,0 +1,29 @@
+{
+  "name": "ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/builder-vite": "^8.6.14",
+    "@storybook/client-api": "^7.6.17",
+    "@storybook/html": "^8.6.14",
+    "@storybook/html-vite": "^8.6.14",
+    "@storybook/test": "^8.6.14",
+    "@types/drupal-attribute": "^1.0.2",
+    "storybook": "^8.6.14",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-twig-drupal": "^1.6.0"
+  }
+}

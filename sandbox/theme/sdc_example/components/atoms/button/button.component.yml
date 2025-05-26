@@ -1,0 +1,33 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+
+name: button
+
+status: stable
+
+description: Render a button.
+
+group: Content
+
+props:
+  type: object
+
+  properties:
+    variant:
+      title: Variant
+      type: ['string', 'null']
+      enum:
+        - "primary"
+        - "secondary"
+        - null
+      anyOf:
+        - { "const": "primary", "title": "Primary", "description": "..." }
+        - { "const": "secondary", "title": "Secondary", "description": "..." }
+      default: null
+slots:
+  value:
+    title: value
+    required: true
+    description: Text of the button
+
+libraryDependencies:
+  - core/once

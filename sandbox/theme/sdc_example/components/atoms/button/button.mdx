@@ -1,0 +1,62 @@
+import { Meta, Controls, Story, Canvas, ArgTypes, Title } from '@storybook/blocks';
+import * as Button from './button.stories';
+
+<Meta title="UI/Atoms/Button" name="Documentation" component={Button} />
+
+<Title>Button</Title>
+
+Buttons allow users to take actions, and make choices with a single tap.
+
+### Usage
+
+- A button should contain at least one text.
+- The first letter of the word on the buttons is capitalized and the rest is lowercase.
+- Button texts are limited to one line.
+
+## Button example
+
+We have only 3 variant for this button: default | primary | secondary
+
+<Canvas of={Button.Default} />
+
+## Using button with Drupal
+
+Using the button component with `include` twig function
+
+```twig
+{{ include(
+  'sdc_example:button',
+  {
+    value: 'Button primary!',
+    variant: 'primary',
+  },
+  with_context = true)
+}}
+```
+
+```twig
+{% include 'sdc_example:button' with {
+  value: 'Button secondary',
+  variant: 'secondary',
+} only %}
+```
+
+Using the button component with `embed` twig function
+
+```twig
+{% embed "sdc_example:button" with {
+  variant: null,
+} only %}
+  {% block value 'Button' %}
+{% endembed %}
+```
+
+```twig
+{% embed "sdc_example:button" with {} only %}
+  {% block value 'Default' %}
+{% endembed %}
+```
+
+## References
+
+<ArgTypes of={Button} />

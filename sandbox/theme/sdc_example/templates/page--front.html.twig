@@ -1,0 +1,33 @@
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+    Hello!
+
+    {{ include(
+      'sdc_example:button',
+      {
+        value: 'Button primary!',
+        variant: 'primary',
+      },
+      with_context = true)
+    }}
+
+    {% include 'sdc_example:button' with {
+        value: 'Button secondary',
+        variant: 'secondary',
+      } only %}
+
+    {% embed "sdc_example:button" with {
+        variant: null,
+    } only %}
+      {% block value 'Button' %}
+    {% endembed %}
+
+    {% embed "sdc_example:button" with {} only %}
+      {% block value 'Default' %}
+    {% endembed %}
+
+    {{ page.content }}
+
+  </div>
+</div>

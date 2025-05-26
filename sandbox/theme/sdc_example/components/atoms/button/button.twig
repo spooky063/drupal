@@ -1,0 +1,4 @@
+{% if variant is not empty %}
+  {% set attributes = attributes.addClass('btn-' ~ variant) %}
+{% endif %}
+<button{{ attributes.addClass('btn') }}>{% block value %}{{ value }}{% endblock %}</button>

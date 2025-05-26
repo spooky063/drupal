@@ -1,0 +1,12 @@
+body {
+  font-family: Nunito Sans, Arial, Helvetica, freesans, sans-serif;
+  color: var(--color-default);
+}
+
+.theme-dark {
+  --color-default: #fff;
+}
+
+.theme-light {
+  --color-default: #000;
+}
