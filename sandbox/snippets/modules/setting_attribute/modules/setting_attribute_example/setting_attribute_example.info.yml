@@ -1,0 +1,4 @@
+name: Setting attribute example
+type: module
+description: Use attribute for retrieve settings value
+core_version_requirement: ^11

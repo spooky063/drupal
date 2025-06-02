@@ -1,0 +1,9 @@
+services:
+  setting_attribute_example.service_autowire:
+    class: Drupal\setting_attribute_example\SettingAttribute
+    autowire: true
+
+  setting_attribute_example.service_argument:
+    class: Drupal\setting_attribute_example\SettingAttribute
+    arguments:
+      - '%settings.hash_salt%'

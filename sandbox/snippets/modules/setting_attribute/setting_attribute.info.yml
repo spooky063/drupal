@@ -1,0 +1,4 @@
+name: Setting attribute
+type: module
+description: Create a custom attribute for settings values
+core_version_requirement: ^11

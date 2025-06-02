@@ -1,0 +1,15 @@
+setting_attribute_example.autowire:
+  path: '/setting_attribute_example/autowire'
+  defaults:
+    _controller: '\Drupal\setting_attribute_example\Controller\SettingController::autowire'
+    _title: 'Setting Attribute Example - Autowire'
+  requirements:
+    _permission: 'access content'
+
+setting_attribute_example.argument:
+  path: '/setting_attribute_example/argument'
+  defaults:
+    _controller: '\Drupal\setting_attribute_example\Controller\SettingController::argument'
+    _title: 'Setting Attribute Example - Argument'
+  requirements:
+    _permission: 'access content'
