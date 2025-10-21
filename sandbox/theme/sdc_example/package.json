@@ -23,7 +23,7 @@
     "@types/drupal-attribute": "^1.0.2",
     "storybook": "^8.6.14",
     "typescript": "~5.8.3",
-    "vite": "^6.3.5",
+    "vite": "^6.4.1",
     "vite-plugin-twig-drupal": "^1.6.0"
   }
 }
