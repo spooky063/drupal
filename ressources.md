@@ -25,6 +25,7 @@ I got tired of always going back to my configuration files to find out which awe
 - [Link Attributes widget](https://www.drupal.org/project/link_attributes): Add metadata to core link widget like target, rel
 - [Linkit](https://www.drupal.org/project/linkit): Provides an autocomplete interface for internal and external linking in rich-text editors
 - [Health Check Url](https://www.drupal.org/project/health_check_url): For liveness/rediness
+- [Key](https://www.drupal.org/project/key): Key management
 - [Masquerade](https://www.drupal.org/project/masquerade): To pretend to be an other user
 - [Metatag](https://www.drupal.org/project/metatag): Add structured metadata for pages
 - [Mercure](https://www.drupal.org/project/mercure): Push datas
